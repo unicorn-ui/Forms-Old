@@ -77,9 +77,9 @@ header {
       font-weight: 100;
       margin: 0 0 2em; }
   header .devices {
-    margin-top: 80px;
+    margin-top: 60px;
     background: center center no-repeat;
-    background-image: url(../images/forms-devices-wide-optimized.svg);
+    background-image: url(../images/forms-devices-optimized.svg);
     opacity: .3;
     min-height: 22em; }
   @media only screen and (max-width: 480px) {
