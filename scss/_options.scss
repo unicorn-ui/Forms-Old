@@ -7,7 +7,6 @@ $unicorn-form-fields-bgcolor: #FFF !default;
 $unicorn-form-link-color: #66afe9 !default;
 //Set this to false if you want things like up/down number arrows on right side
 $unicorn-turn-off-number-input-spinners: true !default;
-$unicorn-form-link-color: #66afe9 !default;
 $unicorn-form-color-field-width: 50px !default;
 $unicorn-form-cursor: pointer !default;
 
@@ -21,7 +20,7 @@ $unicorn-form-font-size: 14px !default;
 $unicorn-form-base-line-height: $unicorn-form-font-size * 1.4 !default;
 $unicorn-form-small-font-size: 12px !default;
 $unicorn-form-font-weight: 300 !default;
-$unicorn-form-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$unicorn-form-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
 $unicorn-form-error-color: #cc0000 !default;
 
 
