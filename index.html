@@ -143,6 +143,8 @@
 
           <pre class="prettyprint linenums">
 &lt;!-- SIGN IN EXAMPLES (SIZES) --&gt;
+
+&lt;!-- SMALL --&gt;
 &lt;form class=&quot;form form-panel form-panel-small form-panel-centered demo-login&quot;&gt;
   &lt;div class=&quot;form-panel-header&quot;&gt;
   &lt;h3&gt;Sign In&lt;/h3&gt;
@@ -155,6 +157,8 @@
     &lt;button class=&quot;button button-block button-rounded button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;
+
+&lt;!-- NORMAL--&gt;
 &lt;form class=&quot;form form-panel form-panel-normal form-panel-centered demo-login&quot;&gt;
   &lt;div class=&quot;form-panel-header&quot;&gt;
   &lt;h3&gt;Sign In&lt;/h3&gt;
@@ -167,6 +171,8 @@
     &lt;button class=&quot;button button-block button-rounded button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;
+
+&lt;!-- LARGE--&gt;
 &lt;form class=&quot;form form-panel form-panel-large form-panel-centered demo-login&quot;&gt;
   &lt;div class=&quot;form-panel-header&quot;&gt;
     &lt;h3&gt;Sign In&lt;/h3&gt;
@@ -179,6 +185,8 @@
     &lt;button class=&quot;button button-block button-rounded button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;
+
+&lt;!-- JUMBO--&gt;
 &lt;form class=&quot;form form-panel form-panel-jumbo form-panel-centered demo-login&quot;&gt;
   &lt;div class=&quot;form-panel-header&quot;&gt;
     &lt;h3&gt;Sign In&lt;/h3&gt;
@@ -211,16 +219,18 @@
           </form>
           <pre class="prettyprint linenums">
 &lt;!-- INLINE SIGN IN EXAMPLE --&gt;
-&lt;form class=&quot;form form-panel&quot;&gt;
+&lt;form class=&quot;form form-panel demo-inline-login&quot;&gt;
   &lt;div class=&quot;form-panel-header&quot;&gt;
-    &lt;h3&gt;Sign In&lt;/h3&gt;
+    &lt;h3&gt;Inline Form&lt;/h3&gt;
   &lt;/div&gt;
   &lt;div class=&quot;form-panel-body&quot;&gt;
-    &lt;label for=&quot;login_field&quot;&gt;Email&lt;/label&gt;
-    &lt;input class=&quot;form-input-block&quot; id=&quot;login&quot; name=&quot;login&quot; tabindex=&quot;1&quot; type=&quot;text&quot;&gt;
-    &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
-    &lt;input class=&quot;form-input-block&quot; id=&quot;password&quot; name=&quot;password&quot; tabindex=&quot;2&quot; type=&quot;password&quot;&gt;
-    &lt;button class=&quot;button button-block button-rounded button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
+    &lt;label&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;text&quot;&gt;
+    &lt;label&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot;&gt;
+    &lt;input id=&quot;remember&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label for=&quot;remember&quot;&gt;Remember me&lt;/label&gt;
+    &lt;button class=&quot;button button-rounded button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 </pre>
