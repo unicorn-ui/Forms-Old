@@ -1,5 +1,4 @@
 $background: #fcfcfc;
-$background-header: #CF3A8C;
 $border: #EEE;
 $dark: #212121;
 $light: #BDBDBD;
@@ -10,7 +9,6 @@ $white: #ffffff;
 $white-bluegrey: lighten(#eceff1, 2%);
 $black: #333333;
 $mid-black: #666666;
-$light-black: #999999;
 $font: 'Cherry Swash', sans-serif;
 $x-large-font-size: 24px;
 $large-font-size: 21px;
@@ -112,7 +110,7 @@ nav {
 .hero {
   background: center center no-repeat $highlight;
   background-size: 1200px;
-  color: $white;
+  color: $white-bluegrey;
   padding: 40px 0px 0px 0px;
   border-bottom: 1px solid $border;
   position: relative;
@@ -386,7 +384,7 @@ footer {
       li {
         float: none;
         display: block;
-        border-bottom: 1px solid #EEE;
+        border-bottom: 1px solid $border;
 
         &.home {
           padding: 10px;
@@ -397,7 +395,7 @@ footer {
         }
 
         &.selected {
-          border-bottom: 1px solid #EEE;
+          border-bottom: 1px solid $border;
         }
 
         a {
