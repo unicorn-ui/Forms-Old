@@ -209,15 +209,14 @@ nav {
 
 .showcase,
 .demo-showcase {
-  background: $background;
   margin: 0px 10px 60px 10px;
   position: relative;
 }
 
 .showcase {
+  background: $background;
   border-radius: 10px;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .10);
-
 }
 
 .prettyprint {

@@ -2,8 +2,8 @@
 // BASE DEFAULTS /////////////////////////////////////////
 //////////////////////////////////////////////////////////
 $unicorn-form-namespace: '.form' !default; //prefix for all classes
-$unicorn-form-bgcolor: #EEE !default;
-$unicorn-form-fields-bgcolor: #FFF !default;
+$unicorn-form-bgcolor: transparent !default;
+$unicorn-form-fields-bgcolor: transparent !default;
 $unicorn-form-link-color: #66afe9 !default;
 //Set this to false if you want things like up/down number arrows on right side
 $unicorn-turn-off-number-input-spinners: true !default;
