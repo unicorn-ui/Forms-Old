@@ -349,39 +349,17 @@ nav {
   }
 }
 
-
-    // .prettyprint {
-    //     box-shadow:inset 0px 1px 3px rgba(0, 0, 0, .40);
-    //     border-radius: 3px;
-    //     background: $dark;
-    //     padding: 5px;
-    //     margin: 0;
-    //     font-size: 10px;
-    //     line-height: $base-font-size;
-    //     overflow: hidden;
-
-    //     .linenums {
-    //         padding-left: 20px;
-    //     }
-
-    //     li.L1, li.L3, li.L5, li.L7, li.L9 {
-    //         background: $dark;
-    //     }
-    // }
-
-
-
 footer {
-    background: $highlight-hover;
-    color: $white-bluegrey;
-    padding: 20px;
-    text-align: center;
-    font-size: $small-font-size;
-    letter-spacing: .06rem;
+  background: $highlight-hover;
+  color: $white-bluegrey;
+  padding: 20px;
+  text-align: center;
+  font-size: $small-font-size;
+  letter-spacing: .06rem;
 
-    a {
-        color: $white;
-    }
+  a {
+    color: $white;
+  }
 }
 
 
@@ -394,44 +372,43 @@ footer {
 
 
 @media only screen and (max-width: 480px) {
-    body {
-        padding: 0px;
-    }
+  body {
+    padding: 0px;
+  }
 
-    // NAVIGATION /////////////////////////
-    nav {
-        position: static;
+  // NAVIGATION /////////////////////////
+  nav {
+    position: static;
 
-        ul {
-            width: auto;
+    ul {
+      width: auto;
 
-            li {
-                float: none;
-                display: block;
-                border-bottom: 1px solid #EEE;
+      li {
+        float: none;
+        display: block;
+        border-bottom: 1px solid #EEE;
 
-                &.home {
-                    padding: 10px;
-                    margin: 5px auto;
-                    a {
-                        margin: 5px auto;
-                    }
-                }
-
-
-                &.selected {
-                    border-bottom: 1px solid #EEE;
-                }
-
-                a {
-                    float: none;
-                    display: block;
-                    line-height: $x-large-font-size;
-                    padding: 10px 20px;
-                    font-size: $large-font-size;
-                    text-align: center;
-                }
-            }
+        &.home {
+          padding: 10px;
+          margin: 5px auto;
+          a {
+            margin: 5px auto;
+          }
         }
+
+        &.selected {
+          border-bottom: 1px solid #EEE;
+        }
+
+        a {
+          float: none;
+          display: block;
+          line-height: $x-large-font-size;
+          padding: 10px 20px;
+          font-size: $large-font-size;
+          text-align: center;
+        }
+      }
     }
+  }
 }
