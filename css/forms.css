@@ -7,29 +7,40 @@
     clear: both; }
 
 .form {
-  background: transparent; }
+  background: transparent;
+  width: auto; }
   .form fieldset {
     border: 1px solid transparent; }
     .form fieldset legend {
       color: gray; }
   .form ul, .form li {
     list-style: none; }
-  .form .form-input-block {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px; }
+
+.form-panel-jumbo {
+  width: 800px; }
+
+.form-panel-large {
+  width: 600px; }
+
+.form-panel-normal {
+  width: 400px; }
+
+.form-panel-small {
+  width: 300px; }
 
 .form-panel {
-  width: 400px;
-  margin: 60px auto; }
+  margin: 40px 0; }
+
+.form-panel-centered {
+  margin: 40px auto; }
 
 .form-panel-header {
   position: relative;
-  padding: 10px 20px;
+  padding: 12px 20px;
   margin: 0;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-  background-color: #666;
+  background-color: #5a5a5a;
   border: rgba(0, 0, 0, 0.2);
   border-radius: 4px 4px 0 0; }
   .form-panel-header h1, .form-panel-header h2, .form-panel-header h3, .form-panel-header h4, .form-panel-header h5, .form-panel-header h6 {
@@ -89,13 +100,13 @@ input[type="tel"],
 input[type="color"] {
   display: inline-block;
   box-sizing: border-box;
-  height: 42px;
+  height: 40px;
   padding: 7px;
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075);
-  margin: 0;
+  margin: 0 6px;
   outline: none;
   -webkit-appearance: none; }
   textarea:focus, textarea.focus,
@@ -130,6 +141,23 @@ input[type="color"] {
     border-color: #66afe9;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0 0 5px rgba(102, 175, 233, 0.5);
     outline: 0; }
+  textarea.form-input-block,
+  input[type="text"].form-input-block,
+  input[type="password"].form-input-block,
+  input[type="datetime"].form-input-block,
+  input[type="datetime-local"].form-input-block,
+  input[type="date"].form-input-block,
+  input[type="month"].form-input-block,
+  input[type="time"].form-input-block,
+  input[type="week"].form-input-block,
+  input[type="number"].form-input-block,
+  input[type="email"].form-input-block,
+  input[type="url"].form-input-block,
+  input[type="search"].form-input-block,
+  input[type="tel"].form-input-block,
+  input[type="color"].form-input-block {
+    width: 100%;
+    margin: 8px 0 12px 0; }
 
 input[type="color"] {
   width: 50px;
@@ -144,7 +172,7 @@ input::-webkit-inner-spin-button {
 textarea {
   height: auto;
   min-width: 100%;
-  min-height: 42px;
+  min-height: 40px;
   padding: 7px; }
 
 select {
@@ -152,7 +180,7 @@ select {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 42px;
+  height: 40px;
   font-size: 14px;
   padding: 0 7px;
   -webkit-appearance: none;

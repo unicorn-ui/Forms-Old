@@ -3,6 +3,7 @@
 
 #{$unicorn-form-namespace} {
   background: $unicorn-form-bgcolor;
+  width: auto;
 
   fieldset {
     border: 1px solid darken($unicorn-form-bgcolor, 10%);
@@ -11,27 +12,34 @@
     }
   }
   ul, li {list-style: none;}
+}
 
-  #{$unicorn-form-namespace}-input-block {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px;
+@each $uforms-size in $uforms-sizes {
+  $uforms-size-name: nth($uforms-size, 1);
+  $uforms-size: nth($uforms-size, 2);
+
+  $uforms-size-namespace: #{$unicorn-form-namespace}-panel-#{$uforms-size-name};
+
+  #{$uforms-size-namespace} {
+    width: $uforms-size;
   }
-
 }
 
 #{$unicorn-form-namespace}-panel {
-  width: 400px;
-  margin: 60px auto;
+  margin: $unicorn-form-input-height 0;
+}
+
+#{$unicorn-form-namespace}-panel-centered {
+  margin: $unicorn-form-input-height auto;
 }
 
 #{$unicorn-form-namespace}-panel-header {
   position: relative;
-  padding: 10px 20px;
+  padding: 12px 20px;
   margin: 0;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-  background-color: $unicorn-form-font-color;
+  background-color: $unicorn-form-panel-bgcolor;
   border: $unicorn-form-border-color;
   border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
 
@@ -117,7 +125,7 @@ input[type="color"] {
   border: 1px solid $unicorn-form-border-color;
   border-radius: $unicorn-form-border-radius;
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
-  margin: 0;
+  margin: 0 6px;
 
   outline: none;
   -webkit-appearance: none;
@@ -128,7 +136,13 @@ input[type="color"] {
     box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($unicorn-form-link-color, 0.5);
     outline: 0;
   }
+
+  &#{$unicorn-form-namespace}-input-block {
+    width: 100%;
+    margin: 8px 0 12px 0;
+  }
 }
+
 
 input[type="color"] {
   width: $unicorn-form-color-field-width;

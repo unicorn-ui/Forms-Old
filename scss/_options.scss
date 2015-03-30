@@ -3,12 +3,15 @@
 //////////////////////////////////////////////////////////
 $unicorn-form-namespace: '.form' !default; //prefix for all classes
 $unicorn-form-bgcolor: transparent !default;
+$unicorn-form-panel-bgcolor: #5a5a5a!default;
 $unicorn-form-fields-bgcolor: transparent !default;
 $unicorn-form-link-color: #66afe9 !default;
 //Set this to false if you want things like up/down number arrows on right side
 $unicorn-turn-off-number-input-spinners: true !default;
 $unicorn-form-color-field-width: 50px !default;
 $unicorn-form-cursor: pointer !default;
+
+$uforms-sizes: (jumbo 800px) (large 600px) (normal 400px) (small 300px) !default;
 
 //////////////////////////////////////////////////////////
 // TYPOGRAPHY ////////////////////////////////////////////
@@ -26,7 +29,7 @@ $unicorn-form-error-color: #cc0000 !default;
 //////////////////////////////////////////////////////////
 // FIELDS ////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
-$unicorn-form-input-height: $unicorn-form-font-size * 3 !default;
+$unicorn-form-input-height: 40px !default;
 $unicorn-form-input-gutter: $unicorn-form-font-size * 1.5 !default;
 $unicorn-form-input-padding: $unicorn-form-font-size / 2 !default;
 $unicorn-form-transition-duration: 0.2s !default;

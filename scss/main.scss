@@ -212,7 +212,15 @@ nav {
 }
 
 .demo-login .button {
-  margin-top: 10px;
+  margin-top: 8px;
+}
+
+.form.demo-inline-login {
+  width: 650px;
+
+  .button {
+    float: right;
+  }
 }
 
 .showcase {
