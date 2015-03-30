@@ -4,6 +4,7 @@
 #{$unicorn-form-namespace} {
   background: $unicorn-form-bgcolor;
   width: auto;
+  margin: $unicorn-form-input-height 0;
 
   fieldset {
     border: 1px solid darken($unicorn-form-bgcolor, 10%);
@@ -71,35 +72,75 @@ textarea {
   font-weight: $unicorn-form-font-weight;
 }
 
-#{$unicorn-form-namespace}-field-group {
-  margin-bottom: $unicorn-form-font-size;
-  width: 100%;
-  max-width: 100%;
+#{$unicorn-form-namespace}-grouped {
+  margin: 0 0 6px;
+  padding: 0;
 
-  label {
+  & input,
+  & textarea {
     display: block;
-    color: $unicorn-form-font-dark;
-    cursor: $unicorn-form-cursor;
-    margin-bottom: $unicorn-form-font-size * .7;
-
-    //TODO: Inline labels can be place to right or left of input etc.
-    &.inline {
-      display: inline-block;
-    }
+    padding: 10px;
+    margin: 0 0 -2px;
+    border-radius: 0;
+    position: relative;
+    top: 0;
   }
 
-  #{$unicorn-form-namespace}-field {
-    position: relative;
-    /* TODO
-    #{$unicorn-form-namespace}-errors {}
-    */
+  & input:first-child,
+  & textarea:first-child {
+    top: 1px;
+    border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
+    margin: 0;
+  }
+
+  & input:last-child,
+  & textarea:last-child {
+    top: 1px;
+    border-radius: 0 0 $unicorn-form-border-radius $unicorn-form-border-radius;
+    margin: 0;
   }
 }
+
+// #{$unicorn-form-namespace}-field-group {
+//   margin-bottom: $unicorn-form-font-size;
+//   width: 100%;
+//   max-width: 100%;
+
+//   label {
+//     display: block;
+//     color: $unicorn-form-font-dark;
+//     cursor: $unicorn-form-cursor;
+//     margin-bottom: $unicorn-form-font-size * .7;
+
+//     //TODO: Inline labels can be place to right or left of input etc.
+//     &.inline {
+//       display: inline-block;
+//     }
+//   }
+
+//   #{$unicorn-form-namespace}-field {
+//     position: relative;
+//     /* TODO
+//     #{$unicorn-form-namespace}-errors {}
+//     */
+//   }
+// }
 
 @if($unicorn-form-responsive == 'enabled') {
   @media screen and (min-width: $unicorn-form-small-breakpoint) {
   //TODO
   }
+}
+
+textarea,
+input {
+  display: inline-block;
+  border-radius: $unicorn-form-border-radius;
+  margin: 0 6px;
+  padding: $unicorn-form-input-padding;
+  height: $unicorn-form-input-height;
+  background: $unicorn-form-fields-bgcolor;
+  border: 1px solid $unicorn-form-border-color;
 }
 
 textarea,
@@ -117,16 +158,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  display: inline-block;
   box-sizing: border-box;
-  height: $unicorn-form-input-height;
-  padding: $unicorn-form-input-padding;
-  background: $unicorn-form-fields-bgcolor;
-  border: 1px solid $unicorn-form-border-color;
-  border-radius: $unicorn-form-border-radius;
-  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
-  margin: 0 6px;
-
   outline: none;
   -webkit-appearance: none;
 

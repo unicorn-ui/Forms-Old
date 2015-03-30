@@ -8,7 +8,8 @@
 
 .form {
   background: transparent;
-  width: auto; }
+  width: auto;
+  margin: 40px 0; }
   .form fieldset {
     border: 1px solid transparent; }
     .form fieldset legend {
@@ -41,7 +42,7 @@
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   background-color: #5a5a5a;
-  border: rgba(0, 0, 0, 0.2);
+  border: #dddddd;
   border-radius: 4px 4px 0 0; }
   .form-panel-header h1, .form-panel-header h2, .form-panel-header h3, .form-panel-header h4, .form-panel-header h5, .form-panel-header h6 {
     margin-top: 0;
@@ -54,7 +55,7 @@
   padding: 20px;
   font-size: 14px;
   color: #666;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #dddddd;
   border-top: 0;
   border-radius: 0 0 4px 4px; }
 
@@ -66,22 +67,34 @@ textarea {
   font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
-.form-field-group {
-  margin-bottom: 14px;
-  width: 100%;
-  max-width: 100%; }
-  .form-field-group label {
+.form-grouped {
+  margin: 0 0 6px;
+  padding: 0; }
+  .form-grouped input, .form-grouped textarea {
     display: block;
-    color: #4d4d4d;
-    cursor: pointer;
-    margin-bottom: 9.8px; }
-    .form-field-group label.inline {
-      display: inline-block; }
-  .form-field-group .form-field {
+    padding: 10px;
+    margin: 0 0 -2px;
+    border-radius: 0;
     position: relative;
-    /* TODO
-    .form-errors {}
-    */ }
+    top: 0; }
+  .form-grouped input:first-child, .form-grouped textarea:first-child {
+    top: 1px;
+    border-radius: 4px 4px 0 0;
+    margin: 0; }
+  .form-grouped input:last-child, .form-grouped textarea:last-child {
+    top: 1px;
+    border-radius: 0 0 4px 4px;
+    margin: 0; }
+
+textarea,
+input {
+  display: inline-block;
+  border-radius: 4px;
+  margin: 0 6px;
+  padding: 7px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #dddddd; }
 
 textarea,
 input[type="text"],
@@ -98,15 +111,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  display: inline-block;
   box-sizing: border-box;
-  height: 40px;
-  padding: 7px;
-  background: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075);
-  margin: 0 6px;
   outline: none;
   -webkit-appearance: none; }
   textarea:focus, textarea.focus,

@@ -36,7 +36,7 @@ $unicorn-form-transition-duration: 0.2s !default;
 $unicorn-form-border-radius: 4px !default;
 $unicorn-form-placeholder-color: $unicorn-form-font-muted !default;
 $unicorn-form-placeholder-focus-color: lighten($unicorn-form-font-muted, 15%) !default;
-$unicorn-form-border-color: rgba(0,0,0,0.2);
+$unicorn-form-border-color: #dddddd !default;
 $unicorn-form-checkbox-font-size: $unicorn-form-small-font-size !default;
 $unicorn-form-checkbox-height: 13px !default;;
 
