@@ -122,6 +122,9 @@ nav {
   margin: 0px 10px 60px 10px;
   position: relative; }
 
+.demo-login .button {
+  margin-top: 10px; }
+
 .showcase {
   background: #fcfcfc;
   border-radius: 10px;
@@ -158,23 +161,29 @@ nav {
       .subheading h3 em a {
         color: #BDBDBD; }
 
+.demo-showcase,
 .gallery {
   padding: 20px 20px 20px 20px; }
-  .gallery > ul {
+  .demo-showcase ul,
+  .gallery ul {
     list-style-type: none;
     margin: 0px 0px 20px 0px;
     padding: 0; }
-    .gallery > ul:last-child {
+    .demo-showcase ul:last-child,
+    .gallery ul:last-child {
       margin-bottom: 0px; }
-    .gallery > ul > li {
-      margin: 5px;
-      display: inline-block; }
+  .demo-showcase em,
   .gallery em {
     font-size: 11px;
     color: #BDBDBD;
     font-style: normal; }
+  .demo-showcase a,
   .gallery a {
     color: #BDBDBD; }
+
+.gallery > ul > li {
+  margin: 5px;
+  display: inline-block; }
 
 .setup {
   background: #CFD8DC; }

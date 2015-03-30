@@ -84,21 +84,28 @@
     </section>
 
     <section id="demos" class="demo-showcase">
+
       <div class="subheading">
         <h3>Demos</h3>
       </div>
-      <section class="gallery">
+      <!-- <section class="gallery"> -->
         <ul>
-          <li class="form form-panel-top">
+          <li>
+            <form class="form form-panel demo-login">
+              <div class="form-panel-header">
+                <h3>Sign In</h3>
+              </div>
+              <div class="form-panel-body">
+                <label for="login_field">Email</label>
+                <input class="form-input-block" id="login" name="login" tabindex="1" type="text">
+                <label for="password">Password</label>
+                <input class="form-input-block" id="password" name="password" tabindex="2" type="password">
+                <button class="button button-block button-rounded button-primary" tabindex="3">Sign In</button>
+              </div>
+            </form>
           </li>
         </ul>
-      </section>
-      <section class="gallery">
-        <ul>
-          <li class="form form-panel-top">
-          </li>
-        </ul>
-      </section>
+      <!-- </section> -->
     </section>
     <!-- ******************************************************************* -->
     <!-- INPUTS        ***************************************************** -->

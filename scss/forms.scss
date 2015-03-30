@@ -11,7 +11,48 @@
     }
   }
   ul, li {list-style: none;}
+
+  #{$unicorn-form-namespace}-input-block {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
 }
+
+#{$unicorn-form-namespace}-panel {
+  width: 400px;
+  margin: 60px auto;
+}
+
+#{$unicorn-form-namespace}-panel-header {
+  position: relative;
+  padding: 10px 20px;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+  background-color: $unicorn-form-font-color;
+  border: $unicorn-form-border-color;
+  border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $unicorn-form-font-size + 2px;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+}
+
+#{$unicorn-form-namespace}-panel-body {
+  padding: 20px;
+  font-size: $unicorn-form-font-size;
+  color: $unicorn-form-font-color;
+  border: 1px solid $unicorn-form-border-color;
+  border-top: 0;
+  border-radius: 0 0 $unicorn-form-border-radius $unicorn-form-border-radius;
+}
+
 
 label,
 input,

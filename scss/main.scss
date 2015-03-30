@@ -211,6 +211,10 @@ nav {
   position: relative;
 }
 
+.demo-login .button {
+  margin-top: 10px;
+}
+
 .showcase {
   background: $background;
   border-radius: 10px;
@@ -258,21 +262,17 @@ nav {
   }
 }
 
+.demo-showcase,
 .gallery {
   padding: 20px 20px 20px 20px;
 
-  > ul {
+  ul {
     list-style-type: none;
     margin: 0px 0px 20px 0px;
     padding: 0;
 
     &:last-child {
       margin-bottom: 0px;
-    }
-
-    > li {
-      margin: 5px;
-      display: inline-block;
     }
   }
 
@@ -284,6 +284,15 @@ nav {
 
   a {
     color: $light;
+  }
+}
+
+.gallery {
+  > ul {
+    > li {
+      margin: 5px;
+      display: inline-block;
+    }
   }
 }
 

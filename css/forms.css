@@ -14,6 +14,38 @@
       color: gray; }
   .form ul, .form li {
     list-style: none; }
+  .form .form-input-block {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px; }
+
+.form-panel {
+  width: 400px;
+  margin: 60px auto; }
+
+.form-panel-header {
+  position: relative;
+  padding: 10px 20px;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  background-color: #666;
+  border: rgba(0, 0, 0, 0.2);
+  border-radius: 4px 4px 0 0; }
+  .form-panel-header h1, .form-panel-header h2, .form-panel-header h3, .form-panel-header h4, .form-panel-header h5, .form-panel-header h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2; }
+
+.form-panel-body {
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 0;
+  border-radius: 0 0 4px 4px; }
 
 label,
 input,
