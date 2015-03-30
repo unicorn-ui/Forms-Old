@@ -5,4 +5,4 @@ inspiration
 node_modules
 .sass-cache
 .sass-cache/*
-*.?css.map
+*css.map

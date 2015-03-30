@@ -21,11 +21,13 @@ $small-font-size: 14px;
 @keyframes title,
 {
   from {
-    color: $border;
+    color: $white-bluegrey;
+    opacity: .1;
     margin-top: -220px;
   }
   to {
-    color: $dark;
+    color: $white-bluegrey;
+    opacity: 1;
     margin-top: 0px;
   }
 }
@@ -36,128 +38,125 @@ $small-font-size: 14px;
   animation-iteration-count: 1;
 }
 
-
-
 .clear {clear: both;}
 
 body {
-    padding: 60px 0px 0px 0px;
-    margin: 0px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
+  padding: 60px 0px 0px 0px;
+  margin: 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }
 
 // NAVIGATION /////////////////////////
 nav {
-    background: $white;
-    opacity: .9;
+  background: $white;
+  opacity: .9;
+  padding: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+
+  ul {
+    width: 1000px;
+    margin: 0px auto;
     padding: 0px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 100;
+    list-style-type: none;
 
-    ul {
-        width: 900px;
-        margin: 0px auto;
-        padding: 0px;
-        list-style-type: none;
+    li {
+      transition: border .2s;
+      float: left;
+      margin-bottom: -3px;
 
+      &.selected {
+        border-bottom: 10px solid $highlight;
+      }
 
-
-        li {
-            transition: border .2s;
-            float: left;
-            margin-bottom: -3px;
-
-            &.selected {
-              border-bottom: 10px solid $highlight;
-            }
-
-            &.home {
-                padding: 10px;
-
-                a {
-                  border-radius: 100px;
-                  display: block;
-                  line-height: 40px;
-                  width: 40px;
-                  background: $highlight;
-                  color: $white-bluegrey;
-                  font-family: $font;
-                  text-align: center;
-                  font-size: $x-large-font-size;
-                  padding: 0px;
-                }
-
-                &:hover {
-                  a {
-                    background: $highlight-hover;
-                  }
-                }
-            }
-        }
+      &.home {
+        padding: 10px;
 
         a {
-            float: left;
-            text-decoration: none;
-            padding: 20px 28px;
-            color: $light;
-            text-transform: uppercase;
-            font-size: $base-font-size;
+          border-radius: 100px;
+          display: block;
+          line-height: 40px;
+          width: 40px;
+          background: $highlight;
+          color: $white-bluegrey;
+          font-family: $font;
+          text-align: center;
+          font-size: $x-large-font-size;
+          padding: 0px;
         }
-     }
+
+        &:hover {
+          a {
+            background: $highlight-hover;
+          }
+        }
+      }
+    }
+
+    a {
+      float: left;
+      text-decoration: none;
+      padding: 20px 28px;
+      color: $light;
+      text-transform: uppercase;
+      font-size: $base-font-size;
+    }
+  }
 }
 
 // BILLBOARD /////////////////////////
-header {
-    background: center center no-repeat $highlight;
-;
-    background-size: 1200px;
-    color: $white;
-    padding: 40px 0px 0px 0px;
-    border-bottom: 1px solid $border;
-    position: relative;
-    min-height: 45em;
+.hero {
+  background: center center no-repeat $highlight;
+  background-size: 1200px;
+  color: $white;
+  padding: 40px 0px 0px 0px;
+  border-bottom: 1px solid $border;
+  position: relative;
+  min-height: 45em;
 
-    .title {
-      text-align: center;
-      color: $white-bluegrey;
+  .title {
+    text-align: center;
+    color: $white-bluegrey;
 
-      > h1 {
-        font-size: 72px;
-        font-family: $font;
-        margin: 0;
-      }
-
-      > h5 {
-        font-size: 18px;
-        font-weight: 100;
-        margin: 0 0 2em;
-      }
-
+    > h1 {
+      @include title;
+      font-size: 72px;
+      font-family: $font;
+      margin: 0;
     }
 
-    .devices {
-      margin-top: 60px;
-      background: center center no-repeat;
-      background-image: url(../images/forms-devices-wide-optimized.svg);
-      opacity: .3;
-      min-height: 22em;
+    > h5 {
+      font-size: 18px;
+      font-weight: 100;
+      margin: 0 0 2em;
     }
+  }
 
-    @media only screen and (max-width: 480px) {
-      padding: 70px 0px 80px 0px;
-        // .social-buttons {
-        //     position: absolute;
-        //     top: 20px;
-        //     left: auto;
-        //     bottom: auto;
-        //     right: 20px;
-        // }
-    }
+
+  @media only screen and (max-width: 480px) {
+    padding: 70px 0px 80px 0px;
+    // .social-buttons {
+  //     position: absolute;
+  //     top: 20px;
+  //     left: auto;
+  //     bottom: auto;
+  //     right: 20px;
+    // }
+  }
 }
+
+.devices {
+  margin-top: 60px;
+  background: center center no-repeat;
+  background-image: url(../images/forms-devices-wide-optimized.svg);
+  opacity: .3;
+  min-height: 22em;
+}
+
 
 .form-download {
   position: relative;
@@ -199,170 +198,178 @@ header {
 
 
 // PAGE BODY /////////////////////////
-#page {
-    max-width: 920px;
-    margin: 0px auto;
-    margin-top: 80px;
-
-    //BUTTON SHOWCASE /////////////////////////
-    .showcase {
-        border-radius: 10px;
-        box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .10);
-        background: $background;
-        margin: 0px 10px 60px 10px;
-        position: relative;
-
-        hgroup {
-            position: absolute;
-            top: -30px;
-            z-index: 1;
-
-            h3 {
-                font-family: $font;
-                font-weight: lighter;
-                color: $highlight-setup;
-                font-size: $base-font-size;
-                line-height: 30px;
-                margin: 0px;
-                padding: 0px;
-
-                em {
-                    font-size: 11px;
-                    color: $light;
-                    font-style: normal;
-
-                    a {
-                        color: $light;
-                    }
-                }
-            }
-        }
-
-        .gallery {
-            padding: 20px 20px 20px 20px;
-
-            > ul {
-                list-style-type: none;
-                margin: 0px 0px 20px 0px;
-                padding: 0;
-
-                &:last-child {
-                    margin-bottom: 0px;
-                }
-
-                > li {
-                    margin: 5px;
-                    display: inline-block;
-                }
-            }
-
-            em {
-                font-size: 11px;
-                color: $light;
-                font-style: normal;
-
-                a {
-                    color: $light;
-                }
-            }
-        }
-
-        .prettyprint {
-            box-shadow:inset 0px 1px 3px rgba(0, 0, 0, .40);
-            border-bottom-radius: 10px;
-            background: $dark;
-            padding: 10px 5px;
-            margin: 0;
-            font-size: 11px;
-            line-height: $base-font-size;
-            overflow: hidden;
-
-            li.L1, li.L3, li.L5, li.L7, li.L9 {
-                background: $dark;
-            }
-        }
-    }
+.page {
+  max-width: 1020px;
+  margin: 0px auto;
+  margin-top: 80px;
 }
 
 
-#setup {
-    background: $highlight-setup;
+// SHOWCASES /////////////////////////
 
-    h2 {
-        text-align: center;
-        font-weight: 100;
-        font-size: 60px;
-        color: $mid-black;
-        text-shadow: 0px 1px 0px $white;
-        margin: 0px 0px 20px 0px ;
-        line-height: 60px;
-
-        @media only screen and (max-width: 480px) {
-            font-size: 44px;
-        }
-    }
-    h3 {
-        color: $mid-black;
-        font-size: 22px;
-    }
-
-    .instructions {
-        max-width: 880px;
-        padding: 40px 20px;
-        margin: 0px auto;
-
-        ol.steps {
-            padding-left: 30px;
-            > li {
-                line-height: 22px;
-                margin-bottom: 10px;
-                color: $mid-black;
-            }
-        }
-
-        em {
-            font-size: $small-font-size;
-        }
-    }
-
-
-    .prettyprint {
-        box-shadow:inset 0px 1px 3px rgba(0, 0, 0, .40);
-        border-radius: 3px;
-        background: $dark;
-        padding: 5px;
-        margin: 0;
-        font-size: 10px;
-        line-height: $base-font-size;
-        overflow: hidden;
-
-        .linenums {
-            padding-left: 20px;
-        }
-
-        li.L1, li.L3, li.L5, li.L7, li.L9 {
-            background: $dark;
-        }
-    }
-
-    .customize {
-        float: right;
-    }
-
-    .setup {
-        float: left;
-    }
-    .customize, .setup {
-        width: 47%;
-        text-align: left;
-
-        @media only screen and (max-width: 480px) {
-            float: none;
-            width: auto;
-            margin: 20px auto 40px auto;
-        }
-    }
+.showcase,
+.demo-showcase {
+  background: $background;
+  margin: 0px 10px 60px 10px;
+  position: relative;
 }
+
+.showcase {
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .10);
+
+}
+
+.prettyprint {
+  box-shadow:inset 0px 1px 3px rgba(0, 0, 0, .40);
+  border-bottom-radius: 10px;
+  background: $dark;
+  padding: 10px 5px;
+  margin: 0;
+  font-size: 11px;
+  line-height: $base-font-size;
+  overflow: hidden;
+
+  li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: $dark;
+  }
+}
+
+.subheading {
+  position: absolute;
+  top: -30px;
+  z-index: 1;
+
+  h3 {
+    font-family: $font;
+    font-weight: lighter;
+    color: $highlight-setup;
+    font-size: $base-font-size;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+
+    em {
+      font-size: 11px;
+      color: $light;
+      font-style: normal;
+
+      a {
+        color: $light;
+      }
+    }
+  }
+}
+
+.gallery {
+  padding: 20px 20px 20px 20px;
+
+  > ul {
+    list-style-type: none;
+    margin: 0px 0px 20px 0px;
+    padding: 0;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    > li {
+      margin: 5px;
+      display: inline-block;
+    }
+  }
+
+  em {
+    font-size: 11px;
+    color: $light;
+    font-style: normal;
+  }
+
+  a {
+    color: $light;
+  }
+}
+
+.setup {
+  background: $highlight-setup;
+}
+
+.instructions {
+  box-sizing: border-box;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: 0px auto;
+
+  > h2 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 60px;
+    color: $mid-black;
+    text-shadow: 0px 1px 0px $white;
+    margin: 0px 0px 20px 0px;
+    line-height: 60px;
+    @media only screen and (max-width: 480px) {
+      font-size: 44px;
+    }
+  }
+
+  h3 {
+    color: $mid-black;
+    font-size: 22px;
+  }
+
+  ol.steps {
+    padding-left: 30px;
+    > li {
+      line-height: 22px;
+      margin-bottom: 10px;
+      color: $mid-black;
+    }
+  }
+  em {
+    font-size: $small-font-size;
+  }
+
+  .customize {
+    float: right;
+  }
+
+  .setup {
+    float: left;
+  }
+
+  .customize, .setup {
+    width: 47%;
+    text-align: left;
+
+    @media only screen and (max-width: 480px) {
+      float: none;
+      width: auto;
+      margin: 20px auto 40px auto;
+    }
+  }
+}
+
+
+    // .prettyprint {
+    //     box-shadow:inset 0px 1px 3px rgba(0, 0, 0, .40);
+    //     border-radius: 3px;
+    //     background: $dark;
+    //     padding: 5px;
+    //     margin: 0;
+    //     font-size: 10px;
+    //     line-height: $base-font-size;
+    //     overflow: hidden;
+
+    //     .linenums {
+    //         padding-left: 20px;
+    //     }
+
+    //     li.L1, li.L3, li.L5, li.L7, li.L9 {
+    //         background: $dark;
+    //     }
+    // }
+
 
 
 footer {

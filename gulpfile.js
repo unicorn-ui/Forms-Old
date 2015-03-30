@@ -62,7 +62,7 @@ gulp.task('moveCSSLibs', ['clean:css'], function(){
 *
 *  Sass, vender prefix, minify, move
 */
-gulp.task('css', ['clean:css'], function() {
+gulp.task('css', ['moveCSSLibs'], function() {
   var stream = gulp.src('scss/**/*.scss')
       .pipe(sass())
       .pipe(autoprefixer())
@@ -94,7 +94,7 @@ gulp.task('connect', function() {
 *  Local and production build tasks
 */
 
-gulp.task('default', ['css', 'moveJSLibs', 'moveCSSLibs', 'connect'], function() {
+gulp.task('default', ['css', 'moveJSLibs', 'connect'], function() {
 
   //OPEN IN BROWSER
   var stream = gulp.src("./index.html")
