@@ -89,6 +89,12 @@ textarea {
   border-radius: 0 0 4px 4px;
   margin: 0; }
 
+.form-grouped-block input, .form-grouped-block textarea {
+  width: 100%;
+  margin: 0 0 -5px; }
+.form-grouped-block input:last-child, .form-grouped-block textarea:last-child {
+  top: 4px; }
+
 textarea,
 input {
   display: inline-block;

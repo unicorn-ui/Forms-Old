@@ -106,6 +106,18 @@ textarea {
   }
 }
 
+#{$unicorn-form-namespace}-grouped-block {
+  & input,
+  & textarea {
+    width: 100%;
+    margin: 0 0 -5px;
+  }
+  & input:last-child,
+  & textarea:last-child {
+    top: 4px;
+  }
+}
+
 // #{$unicorn-form-namespace}-field-group {
 //   margin-bottom: $unicorn-form-font-size;
 //   width: 100%;
