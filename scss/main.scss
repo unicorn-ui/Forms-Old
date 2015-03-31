@@ -223,6 +223,13 @@ nav {
   }
 }
 
+.demo-formed-grouped {
+  > form {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
 .showcase {
   background: $background;
   border-radius: 10px;

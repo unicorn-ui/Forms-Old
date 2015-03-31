@@ -43,6 +43,7 @@
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   background-color: #5a5a5a;
   border: #dddddd;
+  border-bottom: 0;
   border-radius: 4px 4px 0 0; }
   .form-panel-header h1, .form-panel-header h2, .form-panel-header h3, .form-panel-header h4, .form-panel-header h5, .form-panel-header h6 {
     margin-top: 0;
@@ -56,7 +57,6 @@
   font-size: 14px;
   color: #666;
   border: 1px solid #dddddd;
-  border-top: 0;
   border-radius: 0 0 4px 4px; }
 
 label,
@@ -73,18 +73,21 @@ textarea {
   .form-grouped input, .form-grouped textarea {
     display: block;
     padding: 10px;
-    margin: 0 0 -2px;
+    margin: 0 0 -1px;
     border-radius: 0;
     position: relative;
     top: 0; }
-  .form-grouped input:first-child, .form-grouped textarea:first-child {
-    top: 1px;
-    border-radius: 4px 4px 0 0;
-    margin: 0; }
-  .form-grouped input:last-child, .form-grouped textarea:last-child {
-    top: 1px;
-    border-radius: 0 0 4px 4px;
-    margin: 0; }
+
+.form-grouped-rounded input:first-child, .form-grouped-rounded textarea:first-child {
+  top: 1px;
+  border-radius: 4px 4px 0 0;
+  margin: 0; }
+.form-grouped-rounded input, .form-grouped-rounded textarea {
+  margin: 0 0 -2px; }
+.form-grouped-rounded input:last-child, .form-grouped-rounded textarea:last-child {
+  top: 1px;
+  border-radius: 0 0 4px 4px;
+  margin: 0; }
 
 textarea,
 input {

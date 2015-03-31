@@ -42,6 +42,7 @@
   text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
   background-color: $unicorn-form-panel-bgcolor;
   border: $unicorn-form-border-color;
+  border-bottom: 0;
   border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
 
   h1, h2, h3, h4, h5, h6 {
@@ -58,7 +59,6 @@
   font-size: $unicorn-form-font-size;
   color: $unicorn-form-font-color;
   border: 1px solid $unicorn-form-border-color;
-  border-top: 0;
   border-radius: 0 0 $unicorn-form-border-radius $unicorn-form-border-radius;
 }
 
@@ -80,18 +80,23 @@ textarea {
   & textarea {
     display: block;
     padding: 10px;
-    margin: 0 0 -2px;
+    margin: 0 0 -1px;
     border-radius: 0;
     position: relative;
     top: 0;
   }
+}
 
+#{$unicorn-form-namespace}-grouped-rounded {
   & input:first-child,
   & textarea:first-child {
     top: 1px;
     border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
     margin: 0;
   }
+
+  & input,
+  & textarea {margin: 0 0 -2px;}
 
   & input:last-child,
   & textarea:last-child {

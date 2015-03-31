@@ -130,6 +130,10 @@ nav {
   .form.demo-inline-login .button {
     float: right; }
 
+.demo-formed-grouped > form {
+  float: left;
+  margin-right: 20px; }
+
 .showcase {
   background: #fcfcfc;
   border-radius: 10px;
