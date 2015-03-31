@@ -239,14 +239,41 @@
           <div class="clear"></div>
 
           <pre class="prettyprint linenums">
-&lt;!-- GROUPED FORM EXAMPLE --&gt;
+&lt;!-- GROUPED FORM EXAMPLES --&gt;
 &lt;form class=&quot;form demo-login&quot;&gt;
   &lt;fieldset class=&quot;form-grouped&quot;&gt;
+    &lt;input name=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
     &lt;input name=&quot;login&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
     &lt;input name=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
   &lt;/fieldset&gt;
-  &lt;button class=&quot;button button-small button-rounded button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
+  &lt;button class=&quot;button button-small button-primary&quot; tabindex=&quot;3&quot;&gt;Sign In&lt;/button&gt;
 &lt;/form&gt;
+
+&lt;!-- GROUPED ROUNDED FORM --&gt;
+&lt;form class=&quot;form demo-login&quot;&gt;
+  &lt;fieldset class=&quot;form-grouped form-grouped-rounded&quot;&gt;
+    &lt;input name=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
+    &lt;input name=&quot;login&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+    &lt;input name=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+  &lt;/fieldset&gt;
+  &lt;button class=&quot;button button-small button-rounded button-primary&quot;&gt;Sign In&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- GROUPED FORM IN PANEL --&gt;
+&lt;form class=&quot;form form-panel demo-login&quot;&gt;
+  &lt;div class=&quot;form-panel-header&quot;&gt;
+    &lt;h3&gt;Sign In&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-panel-body&quot;&gt;
+    &lt;fieldset class=&quot;form-grouped form-grouped-rounded&quot;&gt;
+      &lt;input name=&quot;username&quot; type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
+      &lt;input name=&quot;login&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+      &lt;input name=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;
+    &lt;/fieldset&gt;
+    &lt;button class=&quot;button button-small button-rounded button-primary&quot;&gt;Sign In&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
 </pre>
 
         </li>
@@ -535,10 +562,10 @@
         </ul>
         <ul>
           <li>
-            <form class="form" action="http://alexwolfe.github.io/Buttons/" method="get">
+            <form class="form" action="http://unicorn-ui.com/buttons/" method="get">
               <div class="form-field-group">
                 <label class="inline" for="submit-btn">Buttons</label>
-                <input class="button form-field clearfix" type="submit" name="submit-btn" value="Go Grab Buttons!">
+                <input class="button button-large button-3d button-primary button-rounded form-field clearfix" type="submit" name="submit-btn" value="Go Grab Buttons!">
               </div>
             </form>
           </li>
@@ -586,9 +613,7 @@
           <li>
             Add css in the head of your webpage.
             <pre class="prettyprint linenums">
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/forms.css&quot;&gt;
-&lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/forms.js&quot;&gt;&lt;/script&gt;</pre>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/forms.css&quot;&gt;</pre>
           </li>
           <li>Create forms in your html.</li>
         </ol>
@@ -597,21 +622,20 @@
         <h3>
         <i class="fa fa-github"></i> Customize Forms</h2>
         <ol class="steps">
-          <li><a class="button button-rounded button-flat-action button-tiny" href="https://github.com/alexwolfe/Forms/"><i class="fa fa-github"></i> Fork or Download</a> the Forms project on github.
+          <li><a class="button button-rounded button-flat-action button-tiny" href="https://github.com/unicorn-ui/Forms/"><i class="fa fa-github"></i> Fork or Download</a> the Forms project on github.
           </li>
           <li>Make sure you have <a target="_blank" href="http://sass-lang.com/download.html">Sass</a> installed.</li>
+          <li>In the root of the Forms directory type: <pre>sass --watch scss:css</pre> on the command line.</li>
           <li>Edit the _options.scss with your own custom values</li>
-          <li>In the root of the Forms directory type <strong>sass --watch scss:css</strong> on the command line.</li>
-          <li>The forms.css file should now be updated</li>
+          <li>The <strong>css/forms.css</strong> file should now be updated</li>
         </ol>
       </section>
       <div class="clear"></div>
     </section>
   </article>
   <footer>
-    <p>Created at by <a target="_blank" href="https://twitter.com/alexwolfe">@alexwolfe</a> and <a target="_blank" href="https://twitter.com/roblevintennis">@robleivntennis</a></a></p>
+    <p>Forms is part of the <a target="_blank" href="http://unicorn-ui.com">Unicorn-UI Framework</a>, and created by Alex Wolfe <a target="_blank" href="https://twitter.com/alexwolfe">@alexwolfe</a> and Rob Levin <a target="_blank" href="https://twitter.com/roblevintennis">@robleivntennis</a></p>
     <p>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a></p>
-    <p>
   </footer>
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sons-of-obsidian"></script>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -619,14 +643,7 @@
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/forms.js"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-41954774-1', 'alexwolfe.github.io');
-    ga('send', 'pageview');
-
+      //TODO: Google Analytics
   </script>
 </body>
 </html>
