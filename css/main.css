@@ -90,14 +90,14 @@ nav {
       padding: 70px 0px 80px 0px; } }
 
 .devices {
-  margin-top: 60px;
   background: center center no-repeat;
-  background-image: url(../images/forms-devices-wide-optimized.svg);
+  margin-top: 0;
   opacity: .3;
   min-height: 22em; }
 
 .form-download {
-  position: relative; }
+  position: relative;
+  top: -4em; }
 
 .button-download {
   display: block;
