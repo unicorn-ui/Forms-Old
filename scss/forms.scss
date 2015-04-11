@@ -118,31 +118,7 @@ textarea {
   }
 }
 
-// #{$unicorn-form-namespace}-field-group {
-//   margin-bottom: $unicorn-form-font-size;
-//   width: 100%;
-//   max-width: 100%;
-
-//   label {
-//     display: block;
-//     color: $unicorn-form-font-dark;
-//     cursor: $unicorn-form-cursor;
-//     margin-bottom: $unicorn-form-font-size * .7;
-
-//     //TODO: Inline labels can be place to right or left of input etc.
-//     &.inline {
-//       display: inline-block;
-//     }
-//   }
-
-//   #{$unicorn-form-namespace}-field {
-//     position: relative;
-//     /* TODO
-//     #{$unicorn-form-namespace}-errors {}
-//     */
-//   }
 // }
-
 @if($unicorn-form-responsive == 'enabled') {
   @media screen and (min-width: $unicorn-form-small-breakpoint) {
   //TODO
@@ -181,8 +157,8 @@ input[type="color"] {
 
   &:focus,
   &.focus {
-    border-color: $unicorn-form-link-color;
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($unicorn-form-link-color, 0.5);
+    border-color: $unicorn-form-border-color;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($unicorn-form-border-color, 0.5);
     outline: 0;
   }
 
@@ -190,7 +166,52 @@ input[type="color"] {
     width: 100%;
     margin: 8px 0 12px 0;
   }
+
+
+&#{$unicorn-form-namespace}-field {
+  position: relative;
 }
+
+&#{$unicorn-form-namespace}-field-box {
+  border-radius: 0;
+}
+
+&#{$unicorn-form-namespace}-field-pill {
+  border-radius: $unicorn-form-input-height + 5px;
+  padding: $unicorn-form-input-padding + 4px;
+}
+
+&#{$unicorn-form-namespace}-field-line {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+
+  &:focus,
+  &.focus {
+    box-shadow: 0px 1px 0px rgba(0,0,0,.1);
+  }
+}
+
+}
+
+
+// #{$unicorn-form-namespace}-field-group {
+//   margin-bottom: $unicorn-form-font-size;
+//   width: 100%;
+//   max-width: 100%;
+
+//   label {
+//     display: block;
+//     color: $unicorn-form-font-dark;
+//     cursor: $unicorn-form-cursor;
+//     margin-bottom: $unicorn-form-font-size * .7;
+
+//     //TODO: Inline labels can be place to right or left of input etc.
+//     &.inline {
+//       display: inline-block;
+//     }
+//   }
 
 
 input[type="color"] {
