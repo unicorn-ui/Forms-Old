@@ -196,23 +196,45 @@ input[type="color"] {
 }
 
 
-// #{$uforms-namespace}-field-group {
-//   margin-bottom: $uforms-font-size;
-//   width: 100%;
-//   max-width: 100%;
+#{$uforms-namespace}-field-group {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 
-//   label {
-//     display: block;
-//     color: $uforms-font-dark;
-//     cursor: $uforms-cursor;
-//     margin-bottom: $uforms-font-size * .7;
+  [class^="form-field"] {
+    width: 100%;
+    outline: 0;
+    margin: 0;
+  }
 
-//     //TODO: Inline labels can be place to right or left of input etc.
-//     &.inline {
-//       display: inline-block;
-//     }
-//   }
-
+  &.icon-left > i,
+  &.icon-right > i {
+    position: absolute;
+    top: 0;
+    width: $uforms-input-height - 8px;
+    height: $uforms-input-height;
+    line-height: $uforms-input-height;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  &.icon-left {
+    & > i {
+      left: 0;
+    }
+    & > input {
+      padding-left: 30px;
+    }
+  }
+  &.icon-right {
+    & > i {
+      right: 0;
+    }
+    & > input {
+      padding-right: 30px;
+    }
+  }
+}
 
 input[type="color"] {
   width: $uforms-color-field-width;
