@@ -1,15 +1,14 @@
 @import 'options';
 @import 'mixins';
 
-#{$unicorn-form-namespace} {
-  background: $unicorn-form-bgcolor;
+#{$uforms-namespace} {
   width: auto;
-  margin: $unicorn-form-input-height 0;
+  margin: $uforms-input-height 0;
 
   fieldset {
     border: 0;
     legend {
-      color: $unicorn-form-font-muted;
+      color: $uforms-font-muted;
     }
   }
   ul, li {list-style: none;}
@@ -19,61 +18,61 @@
   $uforms-size-name: nth($uforms-size, 1);
   $uforms-size: nth($uforms-size, 2);
 
-  $uforms-size-namespace: #{$unicorn-form-namespace}-panel-#{$uforms-size-name};
+  $uforms-size-namespace: #{$uforms-namespace}-panel-#{$uforms-size-name};
 
   #{$uforms-size-namespace} {
     width: $uforms-size;
   }
 }
 
-#{$unicorn-form-namespace}-panel {
-  margin: $unicorn-form-input-height 0;
+#{$uforms-namespace}-panel {
+  margin: $uforms-input-height 0;
 }
 
-#{$unicorn-form-namespace}-panel-centered {
-  margin: $unicorn-form-input-height auto;
+#{$uforms-namespace}-panel-centered {
+  margin: $uforms-input-height auto;
 }
 
-#{$unicorn-form-namespace}-panel-header {
+#{$uforms-namespace}-panel-header {
   position: relative;
   padding: 12px 20px;
   margin: 0;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-  background-color: $unicorn-form-panel-bgcolor;
-  border: $unicorn-form-border-color;
+  background-color: $uforms-panel-bgcolor;
+  border: $uforms-border-color;
   border-bottom: 0;
-  border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
+  border-radius: $uforms-border-radius $uforms-border-radius 0 0;
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: $unicorn-form-font-size + 2px;
+    font-size: $uforms-font-size + 2px;
     font-weight: normal;
     line-height: 1.2;
   }
 }
 
-#{$unicorn-form-namespace}-panel-body {
+#{$uforms-namespace}-panel-body {
   padding: 20px;
-  font-size: $unicorn-form-font-size;
-  color: $unicorn-form-font-color;
-  border: 1px solid $unicorn-form-border-color;
-  border-radius: 0 0 $unicorn-form-border-radius $unicorn-form-border-radius;
+  font-size: $uforms-font-size;
+  color: $uforms-font-color;
+  border: 1px solid $uforms-border-color;
+  border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
 }
 
 
 label,
 input,
 textarea {
-  color: $unicorn-form-font-color;
-  font-size: $unicorn-form-font-size;
-  font-family: $unicorn-form-font-family;
-  font-weight: $unicorn-form-font-weight;
+  color: $uforms-font-color;
+  font-size: $uforms-font-size;
+  font-family: $uforms-font-family;
+  font-weight: $uforms-font-weight;
 }
 
-#{$unicorn-form-namespace}-grouped {
-  margin: 0 0 6px;
+#{$uforms-namespace}-grouped {
+  margin: 0 0 10px;
   padding: 0;
 
   & input,
@@ -87,11 +86,11 @@ textarea {
   }
 }
 
-#{$unicorn-form-namespace}-grouped-rounded {
+#{$uforms-namespace}-grouped-rounded {
   & input:first-child,
   & textarea:first-child {
     top: 1px;
-    border-radius: $unicorn-form-border-radius $unicorn-form-border-radius 0 0;
+    border-radius: $uforms-border-radius $uforms-border-radius 0 0;
     margin: 0;
   }
 
@@ -101,12 +100,12 @@ textarea {
   & input:last-child,
   & textarea:last-child {
     top: 1px;
-    border-radius: 0 0 $unicorn-form-border-radius $unicorn-form-border-radius;
+    border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
     margin: 0;
   }
 }
 
-#{$unicorn-form-namespace}-grouped-block {
+#{$uforms-namespace}-grouped-block {
   & input,
   & textarea {
     width: 100%;
@@ -115,12 +114,13 @@ textarea {
   & input:last-child,
   & textarea:last-child {
     top: 4px;
+    margin-bottom: 3px;
   }
 }
 
 // }
-@if($unicorn-form-responsive == 'enabled') {
-  @media screen and (min-width: $unicorn-form-small-breakpoint) {
+@if($uforms-responsive == 'enabled') {
+  @media screen and (min-width: $uforms-small-breakpoint) {
   //TODO
   }
 }
@@ -128,12 +128,12 @@ textarea {
 textarea,
 input {
   display: inline-block;
-  border-radius: $unicorn-form-border-radius;
+  border-radius: $uforms-border-radius;
   margin: 0 6px;
-  padding: $unicorn-form-input-padding;
-  height: $unicorn-form-input-height;
-  background: $unicorn-form-fields-bgcolor;
-  border: 1px solid $unicorn-form-border-color;
+  padding: $uforms-input-padding;
+  height: $uforms-input-height;
+  background: $uforms-fields-bgcolor;
+  border: 1px solid $uforms-border-color;
 }
 
 textarea,
@@ -157,31 +157,31 @@ input[type="color"] {
 
   &:focus,
   &.focus {
-    border-color: $unicorn-form-border-color;
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($unicorn-form-border-color, 0.5);
+    border-color: $uforms-border-color;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($uforms-border-color, 0.5);
     outline: 0;
   }
 
-  &#{$unicorn-form-namespace}-input-block {
+  &#{$uforms-namespace}-input-block {
     width: 100%;
     margin: 8px 0 12px 0;
   }
 
 
-&#{$unicorn-form-namespace}-field {
+&#{$uforms-namespace}-field {
   position: relative;
 }
 
-&#{$unicorn-form-namespace}-field-box {
+&#{$uforms-namespace}-field-box {
   border-radius: 0;
 }
 
-&#{$unicorn-form-namespace}-field-pill {
-  border-radius: $unicorn-form-input-height + 5px;
-  padding: $unicorn-form-input-padding + 4px;
+&#{$uforms-namespace}-field-pill {
+  border-radius: $uforms-input-height + 5px;
+  padding: $uforms-input-padding + 4px;
 }
 
-&#{$unicorn-form-namespace}-field-line {
+&#{$uforms-namespace}-field-line {
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -196,16 +196,16 @@ input[type="color"] {
 }
 
 
-// #{$unicorn-form-namespace}-field-group {
-//   margin-bottom: $unicorn-form-font-size;
+// #{$uforms-namespace}-field-group {
+//   margin-bottom: $uforms-font-size;
 //   width: 100%;
 //   max-width: 100%;
 
 //   label {
 //     display: block;
-//     color: $unicorn-form-font-dark;
-//     cursor: $unicorn-form-cursor;
-//     margin-bottom: $unicorn-form-font-size * .7;
+//     color: $uforms-font-dark;
+//     cursor: $uforms-cursor;
+//     margin-bottom: $uforms-font-size * .7;
 
 //     //TODO: Inline labels can be place to right or left of input etc.
 //     &.inline {
@@ -215,7 +215,7 @@ input[type="color"] {
 
 
 input[type="color"] {
-  width: $unicorn-form-color-field-width;
+  width: $uforms-color-field-width;
   background: transparent;
   border: none;
 }
@@ -232,8 +232,8 @@ input[type="color"] {
 textarea {
   height: auto;
   min-width: 100%;
-  min-height: $unicorn-form-input-height;
-  padding: $unicorn-form-font-size / 2;
+  min-height: $uforms-input-height;
+  padding: $uforms-font-size / 2;
 }
 
 select {
@@ -242,54 +242,54 @@ select {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: $unicorn-form-input-height;
-  font-size: $unicorn-form-font-size;
-  padding: 0 $unicorn-form-font-size / 2;
+  height: $uforms-input-height;
+  font-size: $uforms-font-size;
+  padding: 0 $uforms-font-size / 2;
   -webkit-appearance: none;
   -moz-appearance: none;
   option {
-    font-size: $unicorn-form-small-font-size;
+    font-size: $uforms-small-font-size;
   }
 }
 
 ::-webkit-input-placeholder {
-  color: $unicorn-form-placeholder-color;
-  transition: $unicorn-form-transition-duration all;
+  color: $uforms-placeholder-color;
+  transition: $uforms-transition-duration all;
 }
 :-moz-placeholder {
-  color: $unicorn-form-placeholder-color;
-  transition: $unicorn-form-transition-duration all;
+  color: $uforms-placeholder-color;
+  transition: $uforms-transition-duration all;
 }
 ::-webkit-input-placeholder:focus {
-  color: $unicorn-form-placeholder-focus-color;
+  color: $uforms-placeholder-focus-color;
 }
 :-moz-placeholder:focus {
-  color: $unicorn-form-placeholder-focus-color;
+  color: $uforms-placeholder-focus-color;
 }
 
 input[type=radio],
 input[type=checkbox] {
   margin: 0;
   vertical-align: middle;
-  cursor: $unicorn-form-cursor;
+  cursor: $uforms-cursor;
 }
 
-#{$unicorn-form-namespace}-radio,
-#{$unicorn-form-namespace}-checkbox {
+#{$uforms-namespace}-radio,
+#{$uforms-namespace}-checkbox {
   display: inline-block;
   position: relative;
-  background: $unicorn-form-fields-bgcolor;
-  padding: ($unicorn-form-base-line-height - ($unicorn-form-checkbox-font-size * 1.2)) / 2 0 ($unicorn-form-base-line-height - ($unicorn-form-checkbox-font-size * 1.2)) / 2 $unicorn-form-checkbox-height * 1.61;
-  font-size: $unicorn-form-checkbox-font-size;
-  height: $unicorn-form-font-size * 1.2;
-  width: $unicorn-form-font-size * 1.2;
+  background: $uforms-fields-bgcolor;
+  padding: ($uforms-base-line-height - ($uforms-checkbox-font-size * 1.2)) / 2 0 ($uforms-base-line-height - ($uforms-checkbox-font-size * 1.2)) / 2 $uforms-checkbox-height * 1.61;
+  font-size: $uforms-checkbox-font-size;
+  height: $uforms-font-size * 1.2;
+  width: $uforms-font-size * 1.2;
   line-height: 1.2;
-  cursor: $unicorn-form-cursor;
+  cursor: $uforms-cursor;
   input[type=radio],
   input[type=checkbox] {
     display: block;
     position: absolute;
-    top: ($unicorn-form-base-line-height - $unicorn-form-checkbox-height) / 2;
+    top: ($uforms-base-line-height - $uforms-checkbox-height) / 2;
     left: 0px;
   }
 

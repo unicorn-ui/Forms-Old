@@ -179,6 +179,7 @@ nav {
   max-width: 300px;
   margin: 0 auto;
   margin-top: 15px;
+  margin-bottom: 80px;
 
   .github-button {
     min-width: 90px;
@@ -218,12 +219,17 @@ nav {
   position: relative;
 }
 
-.panel-demo-login .button {
-  margin-top: 8px;
+.panel-demo-login {
+  background-color: $white;
+
+  .button {
+    margin-top: 8px;
+  }
 }
 
 .form.panel-demo-inline-login {
   width: 100%;
+  background-color: $white;
 
   .button {
     float: right;
@@ -244,13 +250,14 @@ nav {
 }
 
 .prettyprint {
-  border-bottom-radius: 6px;
   padding: 10px 5px;
   margin: 0;
   font-size: 16px;
   line-height: 1.4;
   overflow: auto;
   background-color: #f5f5f5;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .linenums li {
@@ -319,6 +326,12 @@ pre.prettyprint {
     margin: 0px 0px 20px 0px;
     padding: 0;
 
+    > li {
+      margin: 5px;
+      display: inline-block;
+      width: 100%;
+    }
+
     &:last-child {
       margin-bottom: 0px;
     }
@@ -331,15 +344,11 @@ pre.prettyprint {
   }
 }
 
-.gallery {
-  > ul {
-    > li {
-      margin: 5px;
-      display: inline-block;
-    }
+#toggles {
+  .form-field-group {
+    margin: 5px 0;
   }
 }
-
 .setup {
   background: $highlight-setup;
 }
@@ -370,10 +379,15 @@ pre.prettyprint {
 
   ol.steps {
     padding-left: 30px;
+
     > li {
       line-height: 22px;
       margin-bottom: 10px;
       color: $mid-black;
+    }
+
+    .prettyprint {
+      font-size: 13px;
     }
   }
   em {

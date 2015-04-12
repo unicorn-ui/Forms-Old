@@ -41,11 +41,11 @@
     <ul class="clearfix">
       <li class="home"><a href="#home">F</a></li>
       <li><a href="#panels">Panels</a></li>
+      <li><a href="#grouped">Grouped</a></li>
       <li><a href="#inputs">Inputs</a></li>
       <li><a href="#labels">Labels</a></li>
-      <li><a href="#radios">Radios &amp; Checkboxes</a></li>
+      <li><a href="#toggles">Toggles</a></li>
       <li><a href="#misc">Misc</a></li>
-      <li><a href="#more">More</a></li>
       <li><a href="#setup">Get Started</a></li>
     </ul>
     <div class="clear"></div>
@@ -90,10 +90,11 @@
       <div class="fb-like" data-href="http://alexwolfe.github.io/Forms/" data-send="false" data-layout="form_count" data-width="450" data-show-faces="false"></div>
     </section>
 
-    <section id="panels" class="panel-showcase">
+    <section id="panels" class="showcase">
       <div class="subheading">
         <h2>Panels</h2>
       </div>
+      <section class="gallery">
       <ul>
         <li>
           <form class="form form-panel form-panel-small form-panel-centered panel-demo-login">
@@ -147,7 +148,9 @@
               <button class="button button-block button-rounded button-primary">Sign In</button>
             </div>
           </form>
-
+        </li>
+      </ul>
+      </section>
           <pre class="prettyprint linenums">
 &lt;!-- SIGN IN EXAMPLES (SIZES) --&gt;
 
@@ -207,11 +210,15 @@
   &lt;/div&gt;
 &lt;/form&gt;
 </pre>
-
-        </li>
+    </section>
+    <section id="grouped" class="showcase">
+      <div class="subheading">
+        <h2>Grouped</h2>
+      </div>
+      <section class="gallery">
+      <ul>
         <li class="demo-formed-grouped">
-          <h2>Grouped Forms</h2>
-          <form class="form panel-demo-login">
+          <form class="form">
             <fieldset class="form-grouped">
               <input name="username" type="text" placeholder="Username">
               <input name="login" type="text" placeholder="Email">
@@ -220,7 +227,7 @@
             <button class="button button-small button-primary" tabindex="3">Sign In</button>
           </form>
 
-          <form class="form panel-demo-login">
+          <form class="form">
             <fieldset class="form-grouped form-grouped-rounded">
               <input name="username" type="text" placeholder="Username">
               <input name="login" type="text" placeholder="Email">
@@ -242,9 +249,9 @@
               <a href="#" class="button button-block button-primary button-rounded">Sign In</a>
             </div>
           </form>
-
-          <div class="clear"></div>
-
+        </li>
+      </ul>
+      </section>
           <pre class="prettyprint linenums">
 &lt;!-- GROUPED FORM EXAMPLES --&gt;
 &lt;form class=&quot;form panel-demo-login&quot;&gt;
@@ -280,10 +287,14 @@
     &lt;button class=&quot;button button-small button-rounded button-primary&quot;&gt;Sign In&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-
 </pre>
-
-        </li>
+    </section>
+    <section id="inline" class="showcase">
+      <div class="subheading">
+        <h2>Inline</h2>
+      </div>
+      <section class="gallery">
+      <ul>
         <li>
           <form class="form form-panel panel-demo-inline-login">
             <div class="form-panel-header">
@@ -299,6 +310,9 @@
               <button class="button button-rounded button-primary">Sign In</button>
             </div>
           </form>
+        </li>
+      </ul>
+      </section>
           <pre class="prettyprint linenums">
 &lt;!-- INLINE SIGN IN EXAMPLE --&gt;
 &lt;form class=&quot;form form-panel panel-demo-inline-login&quot;&gt;
@@ -316,9 +330,6 @@
   &lt;/div&gt;
 &lt;/form&gt;
 </pre>
-
-        </li>
-      </ul>
     </section>
     <!-- ******************************************************************* -->
     <!-- INPUTS        ***************************************************** -->
@@ -349,12 +360,6 @@
               <input class="form-field-line clearfix" type="text" name="text" placeholder="Line Input">
             </div>
           </li>
-
-
-
-
-
-
           <li class="form">
             <div class="form-field-group">
               <input class="email form-field clearfix" type="email" name="email" placeholder="Email">
@@ -513,38 +518,38 @@
     <!-- ******************************************************************* -->
     <!-- RADIOS/CHECKBOXES        ***************************************************** -->
     <!-- ******************************************************************* -->
-    <section id="radios" class="showcase">
+    <section id="toggles" class="showcase">
       <div class="subheading">
-        <h2>Radios/Checkboxes</h2>
+        <h2>Radios &amp; Checkboxes</h2>
       </div>
       <section class="gallery">
         <ul>
           <li class="form">
             <div class="form-field-group">
-              <input class="form-checkbox form-field" type="checkbox" name="agree" value="agrees">
+              <input class="form-checkbox form-field" type="checkbox" id="agree" value="agrees">
               <label class="inline" for="agree">I agree to <a href="#">Terms</a></label>
             </div>
             <div class="form-field-group">
-              <input class="form-checkbox form-field" type="checkbox" name="agree" value="agrees">
-              <label class="inline" for="agree">And also this</label>
+              <input class="form-checkbox form-field" type="checkbox" id="agree2" value="agrees">
+              <label class="inline" for="agree2">And also this</label>
             </div>
             <div class="form-field-group">
-              <input class="form-checkbox form-field" type="checkbox" name="agree" value="agrees">
-              <label class="inline" for="agree">Another choice</label>
+              <input class="form-checkbox form-field" type="checkbox" id="agree3" value="agrees">
+              <label class="inline" for="agree3">Another choice</label>
             </div>
           </li>
           <li class="form">
             <div class="form-field-group">
-              <input class="form-radio form-field" type="radio" name="pick" value="">
+              <input class="form-radio form-field" type="radio" id="pick" name="choices" value="">
               <label class="inline" for="pick">I choose this one</label>
             </div>
             <div class="form-field-group">
-              <input class="form-radio form-field" type="radio" name="pick" value="">
-              <label class="inline" for="pick">No, this</label>
+              <input class="form-radio form-field" type="radio" id="pick2" name="choices" value="">
+              <label class="inline" for="pick2">No, this</label>
             </div>
             <div class="form-field-group">
-              <input class="form-radio form-field" type="radio" name="pick" value="">
-              <label class="inline" for="pick">No...this is the one</label>
+              <input class="form-radio form-field" type="radio" id="pick3" name="choices" value="">
+              <label class="inline" for="pick3">No...this is the one</label>
             </div>
           </li>
         </ul>
@@ -624,14 +629,6 @@
     &lt;/div&gt;
 &lt;/form&gt;</pre>
     </section>
-    <section id="more" class="showcase">
-      <div class="subheading">
-        <h2>More</h2>
-      </div>
-      <section class="gallery">
-        <h2>TBD...</h2>
-      </section>
-    </section>
   </section>
   <article id="setup" class="setup">
     <section class="instructions">
@@ -667,7 +664,7 @@
     </section>
   </article>
   <footer>
-    <p>Forms is part of the <a target="_blank" href="http://unicorn-ui.com">Unicorn-UI Framework</a>, and created by Alex Wolfe <a target="_blank" href="https://twitter.com/alexwolfe">@alexwolfe</a> and Rob Levin <a target="_blank" href="https://twitter.com/roblevintennis">@robleivntennis</a></p>
+    <p>Forms is part of the <a target="_blank" href="http://unicorn-ui.com">Unicorn-UI Framework</a>, and created by Alex Wolfe <a target="_blank" href="https://twitter.com/alexwolfe">@alexwolfe</a> and Rob Levin <a target="_blank" href="https://twitter.com/roblevintennis">@roblevintennis</a></p>
     <p>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a></p>
   </footer>
   <script type="text/javascript" src="js/vendor/jquery-1.9.1.min.js"></script>
