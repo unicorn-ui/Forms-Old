@@ -670,8 +670,8 @@
     <p>Forms is part of the <a target="_blank" href="http://unicorn-ui.com">Unicorn-UI Framework</a>, and created by Alex Wolfe <a target="_blank" href="https://twitter.com/alexwolfe">@alexwolfe</a> and Rob Levin <a target="_blank" href="https://twitter.com/roblevintennis">@robleivntennis</a></p>
     <p>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a></p>
   </footer>
-  <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sons-of-obsidian"></script> -->
   <script type="text/javascript" src="js/vendor/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/vendor/prettify.js"></script>
   <script type="text/javascript" src="js/vendor/scrollto.js"></script>
   <script type="text/javascript" src="js/vendor/greensock/minified/TweenMax.min.js"></script>
   <script type="text/javascript" src="js/vendor/greensock/minified/plugins/DrawSVGPlugin.min.js"></script>
@@ -680,6 +680,8 @@
   <script type="text/javascript">
 
 (function() {
+  prettyPrint();
+
   var hiddenHeroElements = $('.title>h1, .title>h5, .form-download');
 
   TweenMax.ticker.fps(60);
