@@ -14,6 +14,10 @@
   ul, li {list-style: none;}
 }
 
+////////////////////////////////////////////
+// PANELS //////////////////////////////////
+////////////////////////////////////////////
+
 @each $uforms-size in $uforms-sizes {
   $uforms-size-name: nth($uforms-size, 1);
   $uforms-size: nth($uforms-size, 2);
@@ -61,6 +65,8 @@
   border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
 }
 
+//TODO
+#{$uforms-namespace}-panel-footer {}
 
 label,
 input,
@@ -87,8 +93,9 @@ textarea {
 }
 
 #{$uforms-namespace}-grouped-rounded {
-  & input:first-child,
-  & textarea:first-child {
+  & > #{$uforms-namespace}-field-group:first-child > input,
+  & > input:first-child,
+  & > textarea:first-child {
     top: 1px;
     border-radius: $uforms-border-radius $uforms-border-radius 0 0;
     margin: 0;
@@ -97,8 +104,9 @@ textarea {
   & input,
   & textarea {margin: 0 0 -2px;}
 
-  & input:last-child,
-  & textarea:last-child {
+  & > #{$uforms-namespace}-field-group:last-child > input,
+  & > input:last-child,
+  & > textarea:last-child {
     top: 1px;
     border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
     margin: 0;
@@ -115,13 +123,6 @@ textarea {
   & textarea:last-child {
     top: 4px;
     margin-bottom: 3px;
-  }
-}
-
-// }
-@if($uforms-responsive == 'enabled') {
-  @media screen and (min-width: $uforms-small-breakpoint) {
-  //TODO
   }
 }
 
@@ -166,7 +167,7 @@ input[type="color"] {
     width: 100%;
     margin: 8px 0 12px 0;
   }
-
+}
 
 &#{$uforms-namespace}-field {
   position: relative;
@@ -193,8 +194,6 @@ input[type="color"] {
   }
 }
 
-}
-
 
 #{$uforms-namespace}-field-group {
   width: 100%;
@@ -217,12 +216,14 @@ input[type="color"] {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
+    color: $uforms-border-color;
   }
   &.icon-left {
     & > i {
       left: 0;
     }
     & > input {
+      width: 100%;
       padding-left: 30px;
     }
   }
@@ -231,6 +232,7 @@ input[type="color"] {
       right: 0;
     }
     & > input {
+      width: 100%;
       padding-right: 30px;
     }
   }
@@ -319,3 +321,11 @@ input[type=checkbox] {
     text-decoration: underline;
   }
 }
+
+
+@if($uforms-responsive == 'enabled') {
+  @media screen and (min-width: $uforms-small-breakpoint) {
+  //TODO
+  }
+}
+
