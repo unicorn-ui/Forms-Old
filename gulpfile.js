@@ -1,6 +1,7 @@
 var gulp            = require('gulp');
 var exec            = require('child_process').exec;
 var sass            = require('gulp-sass');
+var watch           = require('gulp-watch');
 var autoprefixer    = require('gulp-autoprefixer');
 var mainBowerFiles  = require('main-bower-files');
 var usemin          = require('gulp-usemin');
@@ -17,6 +18,7 @@ var rename          = require("gulp-rename");
 var openPage        = require("gulp-open");
 var bower           = require("bower");
 var flatten         = require('gulp-flatten');
+
 
 /**
 *  CLEAN
@@ -67,7 +69,8 @@ gulp.task('css', ['moveCSSLibs'], function() {
       .pipe(sass())
       .pipe(autoprefixer())
       .pipe(minifyCSS({ noAdvanced: true }))
-      .pipe(gulp.dest('css'));
+      .pipe(gulp.dest('css'))
+      .pipe(connect.reload());
 
   return stream;
 });
@@ -79,12 +82,24 @@ gulp.task('css', ['moveCSSLibs'], function() {
 *  connect.reload() is called.
 */
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
   connect.server({
-    root: '.',
+    //https://github.com/AveVlad/gulp-connect/issues/54
+    root: [__dirname],
     port: 8000,
     livereload: true
   });
+});
+
+
+/**
+*  WATCH
+*
+*  Watches files for compilation
+*/
+
+gulp.task('watch', function() {
+  gulp.watch('scss/**/*.scss', ['css']);
 });
 
 
@@ -94,17 +109,13 @@ gulp.task('connect', function() {
 *  Local and production build tasks
 */
 
-gulp.task('default', ['css', 'moveJSLibs', 'connect'], function() {
-
-  //OPEN IN BROWSER
+gulp.task('default', ['moveJSLibs', 'connect', 'watch'], function() {
   var stream = gulp.src("./index.html")
       .pipe(openPage("", {
         app: "Google Chrome",
         url: "http://localhost:8000"
       }));
-
   return stream;
 });
-
 
 
