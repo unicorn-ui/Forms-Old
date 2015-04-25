@@ -1,331 +1,54 @@
+/*! @license
+*
+* FORMS
+* Copyright 2012-2014 Alex Wolfe and Rob Levin
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*        http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+
+/*
+* Required Files
+*
+* These files include the variables and options
+* and base css styles that are required to generate buttons.
+*/
+
 @import 'options';
 @import 'mixins';
+@import 'base';
 
-#{$uforms-namespace} {
-  width: auto;
-  margin: $uforms-input-height 0;
 
-  fieldset {
-    border: 0;
-    legend {
-      color: $uforms-font-muted;
-    }
-  }
-  ul, li {list-style: none;}
-}
+/*
+* Froms Types (optional)
+*
+* All of the files below represent the various form
+* types. None of these files are required. Simple remove
+* the uneeded type below and the form type will be
+* excluded from the final build.
+*/
 
-////////////////////////////////////////////
-// PANELS //////////////////////////////////
-////////////////////////////////////////////
+@import 'types/panels';
+@import 'types/grouped';
+@import 'types/line';
+@import 'types/box';
+@import 'types/pill';
 
-@each $uforms-size in $uforms-sizes {
-  $uforms-size-name: nth($uforms-size, 1);
-  $uforms-size: nth($uforms-size, 2);
-
-  $uforms-size-namespace: #{$uforms-namespace}-panel-#{$uforms-size-name};
-
-  #{$uforms-size-namespace} {
-    width: $uforms-size;
-  }
-}
-
-#{$uforms-namespace}-panel {
-  margin: $uforms-input-height 0;
-}
-
-#{$uforms-namespace}-panel-centered {
-  margin: $uforms-input-height auto;
-}
-
-#{$uforms-namespace}-panel-header {
-  position: relative;
-  padding: 12px 20px;
-  margin: 0;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-  background-color: $uforms-panel-bgcolor;
-  border: $uforms-border-color;
-  border-bottom: 0;
-  border-radius: $uforms-border-radius $uforms-border-radius 0 0;
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: $uforms-font-size + 2px;
-    font-weight: normal;
-    line-height: 1.2;
-  }
-}
-
-#{$uforms-namespace}-panel-body {
-  padding: 20px;
-  font-size: $uforms-font-size;
-  color: $uforms-font-color;
-  border: 1px solid $uforms-border-color;
-  border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
-}
 
 //TODO
-#{$uforms-namespace}-panel-footer {}
-
-label,
-input,
-textarea {
-  color: $uforms-font-color;
-  font-size: $uforms-font-size;
-  font-family: $uforms-font-family;
-  font-weight: $uforms-font-weight;
-}
-
-#{$uforms-namespace}-grouped {
-  margin: 0 0 10px;
-  padding: 0;
-
-  & input,
-  & textarea {
-    display: block;
-    padding: 10px;
-    margin: 0 0 -1px;
-    border-radius: 0;
-    position: relative;
-    top: 0;
-  }
-}
-
-#{$uforms-namespace}-grouped-rounded {
-  & > #{$uforms-namespace}-field-group:first-child > input,
-  & > input:first-child,
-  & > textarea:first-child {
-    top: 1px;
-    border-radius: $uforms-border-radius $uforms-border-radius 0 0;
-    margin: 0;
-  }
-
-  & input,
-  & textarea {margin: 0 0 -2px;}
-
-  & > #{$uforms-namespace}-field-group:last-child > input,
-  & > input:last-child,
-  & > textarea:last-child {
-    top: 1px;
-    border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
-    margin: 0;
-  }
-}
-
-#{$uforms-namespace}-grouped-block {
-  & input,
-  & textarea {
-    width: 100%;
-    margin: 0 0 -5px;
-  }
-  & input:last-child,
-  & textarea:last-child {
-    top: 4px;
-    margin-bottom: 3px;
-  }
-}
-
-textarea,
-input {
-  display: inline-block;
-  border-radius: $uforms-border-radius;
-  margin: 0 6px;
-  padding: $uforms-input-padding;
-  height: $uforms-input-height;
-  background: $uforms-fields-bgcolor;
-  border: 1px solid $uforms-border-color;
-}
-
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-  box-sizing: border-box;
-  outline: none;
-  -webkit-appearance: none;
-
-  &:focus,
-  &.focus {
-    border-color: $uforms-border-color;
-    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($uforms-border-color, 0.5);
-    outline: 0;
-  }
-
-  &#{$uforms-namespace}-input-block {
-    width: 100%;
-    margin: 8px 0 12px 0;
-  }
-}
-
-&#{$uforms-namespace}-field {
-  position: relative;
-}
-
-&#{$uforms-namespace}-field-box {
-  border-radius: 0;
-}
-
-&#{$uforms-namespace}-field-pill {
-  border-radius: $uforms-input-height + 5px;
-  padding: $uforms-input-padding + 4px;
-}
-
-&#{$uforms-namespace}-field-line {
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
-
-  &:focus,
-  &.focus {
-    box-shadow: 0px 1px 0px rgba(0,0,0,.1);
-  }
-}
-
-
-#{$uforms-namespace}-field-group {
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-
-  [class^="form-field"] {
-    width: 100%;
-    outline: 0;
-    margin: 0;
-  }
-
-  &.icon-left > i,
-  &.icon-right > i {
-    position: absolute;
-    top: 0;
-    width: $uforms-input-height - 8px;
-    height: $uforms-input-height;
-    line-height: $uforms-input-height;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    color: $uforms-border-color;
-  }
-  &.icon-left {
-    & > i {
-      left: 0;
-    }
-    & > input {
-      width: 100%;
-      padding-left: 30px;
-    }
-  }
-  &.icon-right {
-    & > i {
-      right: 0;
-    }
-    & > input {
-      width: 100%;
-      padding-right: 30px;
-    }
-  }
-}
-
-input[type="color"] {
-  width: $uforms-color-field-width;
-  background: transparent;
-  border: none;
-}
-
-//http://css-tricks.com/snippets/css/turn-off-number-input-spinners/
-@if($unicorn-turn-off-number-input-spinners) {
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
-
-textarea {
-  height: auto;
-  min-width: 100%;
-  min-height: $uforms-input-height;
-  padding: $uforms-font-size / 2;
-}
-
-select {
-  //opacity: 0;//uncomment if you're going to dynamically put a span and style that
-  display: block;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: $uforms-input-height;
-  font-size: $uforms-font-size;
-  padding: 0 $uforms-font-size / 2;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  option {
-    font-size: $uforms-small-font-size;
-  }
-}
-
-::-webkit-input-placeholder {
-  color: $uforms-placeholder-color;
-  transition: $uforms-transition-duration all;
-}
-:-moz-placeholder {
-  color: $uforms-placeholder-color;
-  transition: $uforms-transition-duration all;
-}
-::-webkit-input-placeholder:focus {
-  color: $uforms-placeholder-focus-color;
-}
-:-moz-placeholder:focus {
-  color: $uforms-placeholder-focus-color;
-}
-
-input[type=radio],
-input[type=checkbox] {
-  margin: 0;
-  vertical-align: middle;
-  cursor: $uforms-cursor;
-}
-
-#{$uforms-namespace}-radio,
-#{$uforms-namespace}-checkbox {
-  display: inline-block;
-  position: relative;
-  background: $uforms-fields-bgcolor;
-  padding: ($uforms-base-line-height - ($uforms-checkbox-font-size * 1.2)) / 2 0 ($uforms-base-line-height - ($uforms-checkbox-font-size * 1.2)) / 2 $uforms-checkbox-height * 1.61;
-  font-size: $uforms-checkbox-font-size;
-  height: $uforms-font-size * 1.2;
-  width: $uforms-font-size * 1.2;
-  line-height: 1.2;
-  cursor: $uforms-cursor;
-  input[type=radio],
-  input[type=checkbox] {
-    display: block;
-    position: absolute;
-    top: ($uforms-base-line-height - $uforms-checkbox-height) / 2;
-    left: 0px;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-}
-
-
 @if($uforms-responsive == 'enabled') {
   @media screen and (min-width: $uforms-small-breakpoint) {
-  //TODO
+    //......
   }
 }
 
