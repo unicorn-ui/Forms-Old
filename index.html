@@ -224,7 +224,7 @@
               <input name="login" type="text" placeholder="Email">
               <input name="password" type="password" placeholder="Password">
             </fieldset>
-            <button class="button button-small button-primary" tabindex="3">Sign In</button>
+            <button class="button button-block button-primary button-full">Sign In</button>
           </form>
 
           <form class="form">
@@ -242,7 +242,7 @@
                 <i class="fa fa-lock"></i>
               </div>
             </fieldset>
-            <button class="button button-small button-rounded button-primary">Sign In</button>
+            <button class="button button-block button-rounded button-primary button-full">Sign In</button>
           </form>
 
           <form class="form form-panel panel-demo-login">
@@ -703,7 +703,6 @@
 
 (function() {
   prettyPrint();
-
   var hiddenHeroElements = $('.title>h1, .title>h5, .form-download');
 
   TweenMax.ticker.fps(60);
@@ -755,8 +754,9 @@
   };
 
   var main = new TimelineLite({onComplete: complete});
-  main.add(headlinesScene(), "headlinesScene")
-      .add(devicesScene(), 'devicesScene');
+  // main.add(headlinesScene(), "headlinesScene")
+  main.add(devicesScene(), 'devicesScene');
+
 })();
 
   </script>
